@@ -61,6 +61,7 @@ internal class Program
         if(exe == 4)
         {
             //Crie um programa para calcular o consumo de combustível por Km.
+            #region INPUT
             Console.WriteLine("\nDigite a quilometragem inicial: ");
             int kmi = int.Parse(Console.ReadLine());
 
@@ -68,11 +69,16 @@ internal class Program
             int kmf = int.Parse((Console.ReadLine()));
 
             Console.WriteLine("\nDigite o consumo de combustivel: ");
-            int consumo = int.Parse((Console.ReadLine()));  
+            int consumo = int.Parse((Console.ReadLine()));
+            #endregion
 
+            #region processamento
             int consumoporkm = kmi - kmf / consumo;
+            #endregion
 
+            #region OUTPUT
             Console.WriteLine($"\nO consumo de combusítvel por km é de {consumoporkm}");
+            #endregion
         }
 
         if (exe == 5) 
@@ -106,10 +112,11 @@ internal class Program
             Console.WriteLine("\nDigite o total de vendas");
             double totalvendas = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nDigite a comissão: ");
-            double comissao = double.Parse(Console.ReadLine());   
+            Console.WriteLine("\nDigite o percentual da comissão: ");
+            double percentualcomissao = double.Parse(Console.ReadLine());   
 
-            double salariototal = salariobase + (totalvendas * comissao/100);
+            double comissao = totalvendas + (totalvendas * percentualcomissao / 100);
+            double salariototal = salariobase + comissao;
 
             Console.WriteLine($"\nO salário total deste vendedor é de {salariototal}");
         }
