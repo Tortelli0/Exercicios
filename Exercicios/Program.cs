@@ -422,7 +422,7 @@ internal class Program
             {
                 int resultado = i * n;
                 Console.WriteLine("\n{0} x {1} = {2}", i, n, resultado);   
-                Console.WriteLine("\n" i + "x" + n + "=" + resultado);   
+                Console.WriteLine(i + "x" + n + "=" + resultado);   
             }
 
         }
@@ -459,7 +459,7 @@ internal class Program
         if (exe == 26)
         {
             Console.Write("Digite um número: ");
-            int numeroDigitado = int.Parse(ConsoleReadLine());
+            int numeroDigitado = int.Parse(Console.ReadLine());
 
             int fib1 = 0, fib2 = 1;
 
