@@ -132,7 +132,7 @@ internal class Program
 
             double media = 3 / ((1 / nota1) + (1 / nota2) + (1 / nota3));
 
-            Console.WriteLine($"\nA média harmônica das notas é: {media}");
+            Console.WriteLine($"\nA média ponderada das notas é: {media}");
         }
 
         if (exe == 10) 
@@ -150,7 +150,7 @@ internal class Program
             Console.WriteLine("\nDigite o peso da 2° prova: ");
             double peso2 = double.Parse(Console.ReadLine());
 
-            double media = (peso1 * nota1) + (peso2 * nota2) / peso1 + peso2;
+            double media = (peso1 * nota1 + peso2 * nota2) / (peso1 + peso2);
 
             Console.WriteLine($"\nA média ponderada é de {media}");
         }
