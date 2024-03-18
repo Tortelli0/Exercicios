@@ -18,15 +18,15 @@ internal class Program
             //Crie um programa para calcular o volume de uma caixa retangular
 
             Console.WriteLine("\nDigite o comprimento: ");
-            int comp = int.Parse(Console.ReadLine());
+            double comp = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\nDigite a largura: ");
-            int larg = int.Parse(Console.ReadLine());
+            double larg = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\nDigite altura: ");
-            int alt = int.Parse(Console.ReadLine());
+            double alt = int.Parse(Console.ReadLine());
 
-            int vol = comp * larg * alt;
+            double vol = comp * larg * alt;
 
             Console.WriteLine($"\nO Volume é {vol}.");
         }
